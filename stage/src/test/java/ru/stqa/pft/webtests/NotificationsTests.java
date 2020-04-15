@@ -23,25 +23,32 @@ public class NotificationsTests {
 
   @Test
   public void test() {
-    driver.get("http://stc-stage1.fos.transas.com/#/overview");
+    driver.get("");
+    driver.findElement(By.xpath("//map-menu-control-element/div/i")).click();
+    driver.findElement(By.xpath("//map-menu-control-element[2]/div/i")).click();
+    driver.findElement(By.xpath("//map-menu-control-element[3]/div/i")).click();
+    driver.findElement(By.xpath("//map-menu-control-element[5]/div/i")).click();
+    driver.findElement(By.xpath("//map-menu-control-element[7]/div/i")).click();
+    driver.findElement(By.xpath("//map-menu-control-element[2]/div/i")).click();
+    driver.findElement(By.xpath("//map-menu-control-element[3]/div/i")).click();
+    driver.findElement(By.xpath("//map-menu-control-element[5]/div/i")).click();
+    driver.findElement(By.xpath("//map-menu-control-element[7]/div/i")).click();
+    driver.findElement(By.xpath("//map-menu-control-element[7]/div/i")).click();
+    driver.findElement(By.xpath("//header/div/i")).click();
     driver.findElement(By.id("dropdown-menu")).click();
     driver.findElement(By.xpath("//article/button")).click();
-    driver.findElement(By.xpath("//a[@id='ngb-tab-20']/span")).click();
+    driver.findElement(By.linkText("Targets")).click();
+    driver.findElement(By.linkText("General")).click();
+    driver.findElement(By.linkText("Targets")).click();
+    driver.findElement(By.linkText("Notifications")).click();
     driver.findElement(By.xpath("//input[@type='number']")).click();
     driver.findElement(By.xpath("//input[@type='number']")).clear();
     driver.findElement(By.xpath("//input[@type='number']")).sendKeys("30");
-    driver.findElement(By.xpath("//div[@id='ngb-tab-20-panel']/div/section/article/notification-tab/form/article[2]")).click();
-    driver.findElement(By.xpath("//div[@id='ngb-tab-20-panel']/div/section/article/notification-tab/form/article[2]/app-checkbox/label")).click();
-    driver.findElement(By.xpath("//div[@id='ngb-tab-20-panel']/div/section/article/notification-tab/form/article[2]/app-checkbox/label")).click();
-    driver.findElement(By.xpath("//div[@id='ngb-tab-20-panel']/div/section/article/notification-tab/form/article[3]/app-checkbox/label")).click();
-    driver.findElement(By.xpath("//div[@id='ngb-tab-20-panel']/div/section/article/notification-tab/form/article[3]/app-checkbox/label")).click();
     driver.findElement(By.xpath("(//input[@type='number'])[2]")).click();
     driver.findElement(By.xpath("(//input[@type='number'])[2]")).clear();
     driver.findElement(By.xpath("(//input[@type='number'])[2]")).sendKeys("30");
-    driver.findElement(By.xpath("(//button[@type='button'])[3]")).click();
     driver.findElement(By.id("dropdown-menu")).click();
     driver.findElement(By.xpath("//article/button")).click();
-    driver.findElement(By.id("ngb-tab-23")).click();
   }
 
   @AfterMethod ()
