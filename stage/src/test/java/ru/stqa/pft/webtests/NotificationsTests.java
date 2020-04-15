@@ -11,7 +11,8 @@ import org.openqa.selenium.WebDriver;
 
 
 public class NotificationsTests {
-  private WebDriver driver;
+
+
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
@@ -23,7 +24,7 @@ public class NotificationsTests {
 
   @Test
   public void test() {
-    driver.get("");
+    driver.get("http://store");
     driver.findElement(By.xpath("//map-menu-control-element/div/i")).click();
     driver.findElement(By.xpath("//map-menu-control-element[2]/div/i")).click();
     driver.findElement(By.xpath("//map-menu-control-element[3]/div/i")).click();
